@@ -17,6 +17,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         ca-certificates \
         make \
+        cmake \
         gcc \
         g++ \
         pkg-config \
@@ -27,13 +28,18 @@ RUN apt-get update && \
         pcsc-tools \
         dvb-tools \
         && \
-        \
+# libarib25
+    git clone https://github.com/stz2012/libarib25.git /tmp/libarib25 && \
+    cd /tmp/libarib25 && \
+    cmake . && \
+    make && \
+    make install && \
+    rm -rf /tmp/libarib25 && \
 # recpt1
-\
     git clone https://github.com/stz2012/recpt1 /tmp/recpt1 && \
     cd /tmp/recpt1/recpt1 && \
     ./autogen.sh && \
-    ./configure && \
+    ./configure --enable-b25 && \
     make && \
     make install && \
     rm -rf /tmp/recpt1 && \

@@ -3,7 +3,7 @@ services:
     mirakurun:
         container_name: mirakurun-3.9.0
         build:
-          context: Mirakurun
+          context: "./mirakurun"
           dockerfile: docker/Dockerfile
         image: chinachu/mirakurun
         cap_add:

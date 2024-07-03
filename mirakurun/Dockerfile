@@ -28,6 +28,7 @@ RUN apt-get update && \
         pcsc-tools \
         dvb-tools \
         && \
+        build-essential libtool autoconf git automake && \
 # libarib25
     git clone https://github.com/stz2012/libarib25.git /tmp/libarib25 && \
     cd /tmp/libarib25 && \

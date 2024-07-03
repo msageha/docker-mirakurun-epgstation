@@ -36,6 +36,7 @@ RUN apt-get update && \
     cmake . && \
     make && \
     make install && \
+    cd /app && \
     rm -rf /tmp/libarib25 && \
 # recpt1
     git clone https://github.com/stz2012/recpt1 /tmp/recpt1 && \
@@ -44,6 +45,7 @@ RUN apt-get update && \
     ./configure --enable-b25 && \
     make && \
     make install && \
+    cd /app && \
     rm -rf /tmp/recpt1 && \
     apt-get -y remove $DEV && \
     apt-get autoremove -y && \

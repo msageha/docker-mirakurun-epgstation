@@ -4,7 +4,7 @@ services:
         container_name: mirakurun-3.9.0
         build:
           context: "./mirakurun"
-          dockerfile: docker/Dockerfile
+          dockerfile: Dockerfile
         image: chinachu/mirakurun
         cap_add:
             - SYS_ADMIN

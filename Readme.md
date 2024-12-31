@@ -10,6 +10,10 @@
 
 ## インストール手順
 
+### ドライバインストール
+
+https://github.com/tsukumijima/px4_drv
+
 ```sh
 curl -sf https://raw.githubusercontent.com/l3tnun/docker-mirakurun-epgstation/v2/setup.sh | sh -s
 cd docker-mirakurun-epgstation
